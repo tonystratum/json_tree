@@ -1,6 +1,3 @@
-from json import loads
-
-
 def jsontree(json, key=None, index=0, dct=False):
     if not isinstance(json, dict) and not isinstance(json, list):
         print(''.join(['\t' for i in range(index)]),
