@@ -1,7 +1,11 @@
 def jsontree(json, key=None, index=0, dct=False):
     if not isinstance(json, dict) and not isinstance(json, list):
-        print(''.join(['\t' for i in range(index)]),
-              f'"{key}": "{json}",')
+        if key is None:
+            print(''.join(['\t' for i in range(index)]),
+                  f'"{json}",')
+        else:
+            print(''.join(['\t' for i in range(index)]),
+                  f'"{key}": "{json}",')
         return True
 
     if isinstance(json, list):
